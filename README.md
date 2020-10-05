@@ -1,4 +1,4 @@
-# MEC_RP
+# EdgeCloudSim
 1. The uploaded document including the reading notes of the EdgeCloudSim study. The original reference paper link is: https://ieeexplore.ieee.org/document/7946405
 
 2. Youtube Channel for studying how to operate the EdgeCloudSim code in Eclipse:https://www.youtube.com/channel/UC2gnXTWHHN6h4bk1D5gpcIA/
