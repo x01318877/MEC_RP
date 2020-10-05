@@ -26,3 +26,5 @@ But for my project, the task migration among the Edge or Cloud VMs and energy co
    
    Q2: Build an energy model in EdgeCloudSim: https://github.com/CagataySonmez/EdgeCloudSim/issues/12
    
+7. Helpful Report: https://ieeexplore.ieee.org/document/7962674
+   
