@@ -4,3 +4,5 @@
 2. Youtube Channel for studying how to operate the EdgeCloudSim code in Eclipse:https://www.youtube.com/channel/UC2gnXTWHHN6h4bk1D5gpcIA/
 
 3. Github link for the original code source: https://github.com/CagataySonmez/EdgeCloudSim
+
+4. Some more helpful document provided by the author: https://github.com/CagataySonmez/EdgeCloudSim/wiki
