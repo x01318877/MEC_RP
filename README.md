@@ -11,6 +11,9 @@ Currently EdgeCloudSim provided necessary functionality in terms of computation 
 But for my project, the task migration among the Edge or Cloud VMs and energy consumption model for the mobile and edge devices would need to be considered.
 
 Use configuration files to manage the parameters. EdgeCloudSim reads parameters dynamically from the following files:
+
 •	config.properties: Simulation settings are managed in configuration file
+
 •	applications.xml: Application properties are stored in xml file
+
 •	edge_devices.xml: Edge devices (datacenters, hosts, VMs etc.) are defined in xml file
