@@ -19,3 +19,9 @@ But for my project, the task migration among the Edge or Cloud VMs and energy co
     •	applications.xml: Application properties are stored in xml file
 
     •	edge_devices.xml: Edge devices (datacenters, hosts, VMs etc.) are defined in xml file
+
+6. Some helpful link regarding future work: 
+
+   Q1: Use the matlab file to plot graphics: https://github.com/CagataySonmez/EdgeCloudSim/issues/29
+   Q2: Build an energy model in EdgeCloudSim: https://github.com/CagataySonmez/EdgeCloudSim/issues/12
+   
