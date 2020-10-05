@@ -1,5 +1,7 @@
-# MEC_RP
+# MatLab
 
-WEEK 1:
-1. Study on the EdgeCloudSim which is providing a simulation environment specific to Edge Computing scenarios.
-   The study material is available in the branch: x01318877-EdgeCloudSim
+1. Provide the graphic result of the EdgeCloudSim
+
+2. MATLAB Onramp: https://uk.mathworks.com/learn/tutorials/matlab-onramp.html
+
+3. Reinforcement Learning Toolbox™ provides functions and blocks for training policies using reinforcement learning algorithms (DQN)
