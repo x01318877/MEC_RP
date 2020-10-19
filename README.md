@@ -12,10 +12,6 @@
 
 3. logic diagram
 <p>
-<img src="https://user-images.githubusercontent.com/23052423/96511816-789de300-1257-11eb-8f42-9f7aef827424.png" style="max-width:50%;">
+<img src="https://user-images.githubusercontent.com/23052423/96511816-789de300-1257-11eb-8f42-9f7aef827424.png" width="600" height="150">
 </p>
-
-
-
-![DRL_Cache](https://user-images.githubusercontent.com/23052423/96511816-789de300-1257-11eb-8f42-9f7aef827424.png)
 
