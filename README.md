@@ -12,8 +12,12 @@
 
 3. logic diagram
    
-***DRL for Caching:***
+   ***DRL for Caching:***
 <p>
 <img src="https://user-images.githubusercontent.com/23052423/96511816-789de300-1257-11eb-8f42-9f7aef827424.png" width="600" height="150">
 </p>
 
+   ***DRL for Computation Offloading:***
+<p>
+<img src="https://user-images.githubusercontent.com/23052423/96513490-1692ad00-125a-11eb-91a2-148df83bad60.png" width="600" height="180">
+</p>
