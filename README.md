@@ -12,7 +12,7 @@ WEEK 1:
 
 
 WEEK 2:
-1. Working on the project specification
+1. Project specification_DRAFT complete
 2. Learning the code based on DRL(Deep Reinforcement Learning)
 3. Do research for reference report for the literature view
 
