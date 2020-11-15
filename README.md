@@ -24,26 +24,24 @@ WEEK 3:
 
 
 WEEK 4:
-1. Keep learning the code based on DRL(Deep Reinforcement Learning): Youtube channel
+1. Learning about DRL(Deep Reinforcement Learning): Youtube channel
    https://www.youtube.com/watch?v=NVWBs7b3oGk&list=PLXO45tsB95cK7G-raBeTVjAoZHtJpiKh3
-2. Do some research based on Federated Learning  
-3. LaTEX: Fill the objectives topic of the report
+2. LaTEX: Fill the objectives topic of the report
 
 
 WEEK 5:
-1. Keep learning the code based on DRL(Deep Reinforcement Learning): Youtube channel
+1. Learning about DRL(Deep Reinforcement Learning): Youtube channel
    https://www.youtube.com/watch?v=NVWBs7b3oGk&list=PLXO45tsB95cK7G-raBeTVjAoZHtJpiKh3
-2. Do some research based on Federated Learning  
+   Website: https://mofanpy.com/tutorials/machine-learning/reinforcement-learning/
 
 
 WEEK 6:
-1. Keep learning the code based on DRL(Deep Reinforcement Learning): Youtube channel
+1. Learning about DRL(Deep Reinforcement Learning): Youtube channel
    https://www.youtube.com/watch?v=NVWBs7b3oGk&list=PLXO45tsB95cK7G-raBeTVjAoZHtJpiKh3
-2. Do some research based on Federated Learning  
+   Website: https://mofanpy.com/tutorials/machine-learning/reinforcement-learning/
+2. Study on Federated Learning  
 
 
 WEEK 7:
-1. Keep learning the code based on DRL(Deep Reinforcement Learning): Youtube channel
-   https://www.youtube.com/watch?v=NVWBs7b3oGk&list=PLXO45tsB95cK7G-raBeTVjAoZHtJpiKh3
-2. Do some research based on Federated Learning 
+1. Study on Federated Learning 
 
