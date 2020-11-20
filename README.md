@@ -24,24 +24,24 @@ WEEK 3:
 
 
 WEEK 4:
-1. Learning about DRL(Deep Reinforcement Learning): Youtube channel
-   https://www.youtube.com/watch?v=NVWBs7b3oGk&list=PLXO45tsB95cK7G-raBeTVjAoZHtJpiKh3
+1. Learning about DRL(Deep Reinforcement Learning): Q-Learning
 2. LaTEX: Fill the objectives topic of the report
 
 
 WEEK 5:
-1. Learning about DRL(Deep Reinforcement Learning): Youtube channel
-   https://www.youtube.com/watch?v=NVWBs7b3oGk&list=PLXO45tsB95cK7G-raBeTVjAoZHtJpiKh3
-   Website: https://mofanpy.com/tutorials/machine-learning/reinforcement-learning/
+1. Learning about DRL(Deep Reinforcement Learning): DQN + Numpy & Pandas
 
 
 WEEK 6:
-1. Learning about DRL(Deep Reinforcement Learning): Youtube channel
-   https://www.youtube.com/watch?v=NVWBs7b3oGk&list=PLXO45tsB95cK7G-raBeTVjAoZHtJpiKh3
-   Website: https://mofanpy.com/tutorials/machine-learning/reinforcement-learning/
+1. Learning about DRL(Deep Reinforcement Learning): DQN + Tensorflow
 2. Study on Federated Learning  
 
 
 WEEK 7:
-1. Study on Federated Learning 
+1. Study on DRL + Federated Learning 
+
+
+WEEK 8:
+1. Study on DRL + Federated Learning 
+
 
