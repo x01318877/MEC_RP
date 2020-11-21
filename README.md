@@ -2,27 +2,39 @@
 Used for learned data processing
 
 • Fast calculation speed: numpy and pandas are both written in C language, and pandas is based on numpy, which is an upgraded version of numpy.
+
 • Less resource consumption: Matrix calculations are used, which will be much faster than the dictionary or list that comes with python
 
 ## Numpy
 ## 1.Numpy Attributes
+
 • ndim: dimension
+
 • shape: number of rows and columns
+
 • size: the number of elements
 
 ## 2.Numpy - create array
+
 • array: create an array
+
 • dtype: specify the data type and format (int, float)
+
 • zeros: create the value of data all 0
+
 • ones: create the value of data all 1
+
 • empty: create the value ofdata close to 0
+
 • arrange: create data in a specified range
+
 • linspace: create line segments
 
 
 ## 3.Several basic operations of Numpy (1)-element calculation and search operations
 ### i.One-dimensional：
 (1)-/+/*
+
 code:
 import numpy as np
 a=np.array([10,20,30,40])   # array([10, 20, 30, 40])
@@ -45,6 +57,7 @@ c=a*b         #array([  0,  20,  60, 120])
 
 
 ### ii.Multi-row and multi-dimensional matrix：
+
 (1) *
 a=np.array([[1,1],[0,1]])
 b=np.arange(4).reshape((2,2))
