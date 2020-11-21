@@ -412,6 +412,38 @@ print(b)        # array([11, 22, 33,  3])
 
 
 ## Pandas
+### Basic introduction
+(1)Series : 
+import pandas as pd
+import numpy as np
+s = pd.Series([1,3,6,np.nan,44,1])
+
+print(s)
+"""
+0     1.0
+1     3.0
+2     6.0
+3     NaN
+4    44.0
+5     1.0
+dtype: float64
+"""
+
+
+(2)DataFrame 
+dates = pd.date_range('20160101',periods=6)
+df = pd.DataFrame(np.random.randn(6,4),index=dates,columns=['a','b','c','d'])
+
+print(df)
+"""
+                   a         b         c         d
+2016-01-01 -0.253065 -2.071051 -0.640515  0.613663
+2016-01-02 -1.147178  1.532470  0.989255 -0.499761
+2016-01-03  1.221656 -2.390171  1.862914  0.778070
+2016-01-04  1.473877 -0.046419  0.610046  0.204672
+2016-01-05 -1.584752 -0.700592  1.487264 -1.778293
+2016-01-06  0.633675 -1.414157 -0.277066 -0.442545
+"""
 
 
 
