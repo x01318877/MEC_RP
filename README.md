@@ -5,12 +5,12 @@ Used for learned data processing
 • Less resource consumption: Matrix calculations are used, which will be much faster than the dictionary or list that comes with python
 
 ## Numpy
-## Numpy Attributes
+## 1.Numpy Attributes
 • ndim: dimension
 • shape: number of rows and columns
 • size: the number of elements
 
-## Numpy - create array
+## 2.Numpy - create array
 • array: create an array
 • dtype: specify the data type and format (int, float)
 • zeros: create the value of data all 0
@@ -20,8 +20,8 @@ Used for learned data processing
 • linspace: create line segments
 
 
-## Several basic operations of Numpy (1)-element calculation and search operations
-### One-dimensional：
+## 3.Several basic operations of Numpy (1)-element calculation and search operations
+### i.One-dimensional：
 (1)-/+/*
 code:
 import numpy as np
@@ -44,7 +44,7 @@ c=a*b         #array([  0,  20,  60, 120])
          #array([ True,  True,  True, False], dtype=bool)
 
 
-### Multi-row and multi-dimensional matrix：
+### ii.Multi-row and multi-dimensional matrix：
 (1) *
 a=np.array([[1,1],[0,1]])
 b=np.arange(4).reshape((2,2))
@@ -92,7 +92,7 @@ print("max =",np.max(a,axis=1))
 #max = [ 0.84869417  0.9043845 ]
 
 
-## Several basic operations of Numpy (2)- The index of the corresponding element
+## 4.Several basic operations of Numpy (2)- The index of the corresponding element
 
 import numpy as np
 A = np.arange(2,14).reshape((3,4)) 
@@ -165,8 +165,8 @@ print(np.clip(A,5,9))
         [ 6, 5, 5, 5]])
 
 
-## Numpy index
-### One-dimensional
+## 5.Numpy index
+### i.One-dimensional
 import numpy as np
 A = np.arange(3,15)
 
@@ -186,7 +186,7 @@ print(A[2])
 #[11 12 13 14]
 
 
-### Two-dimensional index
+### ii.Two-dimensional index
 
 print(A[1][1])      # 8
 print(A[1, 1])      # 8
@@ -227,8 +227,8 @@ for item in A.flat:
 #14
 
 
-## Numpy array stack
-### np.vstack() 
+## 6.Numpy array stack
+### i.np.vstack() 
 
 import numpy as np
 A = np.array([1,1,1])
@@ -245,7 +245,7 @@ print(A.shape,C.shape)
 
 #(3,) (2,3)
 
-### np.hstack() 
+### ii.np.hstack() 
 
 D = np.hstack((A,B))       # horizontal stack
 
@@ -255,7 +255,7 @@ print(D)
 print(A.shape,D.shape)
 #(3,) (6,)
 
-### np.newaxis() 
+### iii.np.newaxis() 
 print(A[np.newaxis,:])
 #[[1 1 1]]
 
@@ -290,7 +290,7 @@ print(D)
 print(A.shape,D.shape)
 #(3,1) (3,2)
 
-### np.concatenate() 
+### iiii.np.concatenate() 
 
 C = np.concatenate((A,B,B,A),axis=0)
 
@@ -320,7 +320,7 @@ array([[1, 2, 2, 1],
 """
 
 
-## Numpy array split
+## 7.Numpy array split
 
 import numpy as np
 A = np.arange(12).reshape((3, 4))
@@ -330,7 +330,7 @@ array([[ 0,  1,  2,  3],
     [ 4,  5,  6,  7],
     [ 8,  9, 10, 11]])
 """
-### Vertical split
+### i.Vertical split
 print(np.split(A, 2, axis=1))
 """
 [array([[0, 1],
@@ -340,7 +340,7 @@ print(np.split(A, 2, axis=1))
         [ 6,  7],
         [10, 11]])]
 """
-### Horizontal split
+### ii.Horizontal split
 print(np.split(A, 3, axis=0))
 
 #[array([[0, 1, 2, 3]]), array([[4, 5, 6, 7]]), array([[ 8,  9, 10, 11]])]
@@ -348,7 +348,7 @@ print(np.split(A, 3, axis=0))
 print(np.split(A, 3, axis=1))
 #ValueError: array split does not result in an equal division
 
-### Unequal division
+### iii.Unequal division
 print(np.array_split(A, 3, axis=1))
 """
 [array([[0, 1],
@@ -362,7 +362,7 @@ print(np.array_split(A, 3, axis=1))
         [11]])]
 """
 
-### other
+### iiii.other
 (1)print(np.vsplit(A, 3)) 
 
 #[array([[0, 1, 2, 3]]), array([[4, 5, 6, 7]]), array([[ 8,  9, 10, 11]])]
@@ -379,7 +379,7 @@ array([[ 2,  3],
 """
 
 
-## Numpy copy & deep copy
+## 8.Numpy copy & deep copy
 (1) =
 import numpy as np
 
@@ -412,7 +412,7 @@ print(b)        # array([11, 22, 33,  3])
 
 
 ## Pandas
-### Basic introduction
+### 1.Basic introduction
 (1)Series : 
 import pandas as pd
 import numpy as np
@@ -446,11 +446,86 @@ print(df)
 """
 
 
+(3)other functions
+df2 = pd.DataFrame
+df2.dtypes
+df2.index
+df2.columns
+df2.values
+df2.describe()
+df2.T  #transpose
 
 
+### 2.Choose data
+(1)simple
+code: 
+dates = pd.date_range('20130101', periods=6)
+df = pd.DataFrame(np.arange(24).reshape((6,4)),index=dates, columns=['A','B','C','D'])
 
+"""
+             A   B   C   D
+2013-01-01   0   1   2   3
+2013-01-02   4   5   6   7
+2013-01-03   8   9  10  11
+2013-01-04  12  13  14  15
+2013-01-05  16  17  18  19
+2013-01-06  20  21  22  23
+"""
 
+print(df['A'])
+print(df.A)
+print(df[0:3])
+print(df['20130102':'20130104'])
 
+(2)loc
+print(df.loc['20130102'])
+"""
+A    4
+B    5
+C    6
+D    7
+Name: 2013-01-02 00:00:00, dtype: int64
+"""
+
+print(df.loc[:,['A','B']]) 
+"""
+             A   B
+2013-01-01   0   1
+2013-01-02   4   5
+2013-01-03   8   9
+2013-01-04  12  13
+2013-01-05  16  17
+2013-01-06  20  21
+"""
+
+print(df.loc['20130102',['A','B']])
+"""
+A    4
+B    5
+Name: 2013-01-02 00:00:00, dtype: int64
+"""
+
+(3)iloc
+print(df.iloc[3,1])
+# 13
+
+print(df.iloc[3:5,1:3])
+"""
+             B   C
+2013-01-04  13  14
+2013-01-05  17  18
+"""
+
+print(df.iloc[[1,3,5],1:3])
+"""
+             B   C
+2013-01-02   5   6
+2013-01-04  13  14
+2013-01-06  21  22
+
+"""
+
+(4)
 
 
 
