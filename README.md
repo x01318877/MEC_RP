@@ -4,7 +4,7 @@ Used for learned data processing
 • Fast calculation speed: numpy and pandas are both written in C language, and pandas is based on numpy, which is an upgraded version of numpy.
 • Less resource consumption: Matrix calculations are used, which will be much faster than the dictionary or list that comes with python
 
-## Numpy 属性
+## Numpy Attributes
 • ndim: dimension
 • shape: number of rows and columns
 • size: the number of elements
@@ -21,7 +21,7 @@ Used for learned data processing
 
 ## Several basic operations of Numpy (1)-element calculation and search operations
 ### One-dimensional：
-
+(1)-/+/*
 code:
 import numpy as np
 a=np.array([10,20,30,40])   # array([10, 20, 30, 40])
@@ -32,61 +32,63 @@ c=a-b         #array([10, 19, 28, 37])
 c=a+b         #array([10, 21, 32, 43])
 c=a*b         #array([  0,  20,  60, 120])
 
-在Numpy中，想要求出矩阵中各个元素的乘方需要依赖双星符号 **，以二次方举例，即：
-c=b**2  # array([0, 1, 4, 9])
-数学函数工具，比如三角函数等，对矩阵中每一项元素进行函数运算时（以sin函数为例）：
-c=10*np.sin(a)  
-# array([-5.44021111,  9.12945251, -9.88031624,  7.4511316 ])
-除了函数应用外，在脚本中对print函数进行一些修改可以进行逻辑判断：
-print(b<3)  
-# array([ True,  True,  True, False], dtype=bool)
-此时由于进行逻辑判断，返回的是一个bool类型的矩阵，即对满足要求的返回True，不满足的返回False。如果想要执行是否相等的判断， 依然需要输入 == 而不是 = 来完成相应的逻辑判断。
+(2)Quadratic:
+   c=b**2  #array([0, 1, 4, 9])
 
-对多行多维度的矩阵进行操作（2行2列）：
+(3)c=10*np.sin(a)  
+   #array([-5.44021111,  9.12945251, -9.88031624,  7.4511316 ])
+
+(4)boolean: 
+         print(b<3)  
+         #array([ True,  True,  True, False], dtype=bool)
+
+
+### Multi-row and multi-dimensional matrix：
+(1) *
 a=np.array([[1,1],[0,1]])
 b=np.arange(4).reshape((2,2))
 
 print(a)
-# array([[1, 1],
-#       [0, 1]])
+#array([[1, 1],
+       [0, 1]])
 
 print(b)
-# array([[0, 1],
-#       [2, 3]])
-Numpy中的矩阵乘法分为两种， 其一是前文中的对应元素相乘，其二是标准的矩阵乘法运算，即对应行乘对应列得到相应元素：
+#array([[0, 1],
+       [2, 3]])
+
 c_dot = np.dot(a,b)
-# array([[2, 4],
-#       [2, 3]])
-除此之外还有另外的一种关于dot的表示方法，即：
+#array([[2, 4],
+       [2, 3]])
+other way:
 c_dot_2 = a.dot(b)
-# array([[2, 4],
-#       [2, 3]])
-矩阵怎样计算: https://www.jianshu.com/p/09f4174a723f
-sum(), min(), max()的使用：
+#array([[2, 4],
+       [2, 3]])
+
+(2) sum(), min(), max()的使用：
 import numpy as np
 a=np.random.random((2,4))
 print(a)
-# array([[ 0.94692159,  0.20821798,  0.35339414,  0.2805278 ],
-#       [ 0.04836775,  0.04023552,  0.44091941,  0.21665268]])
-因为是随机生成数字, 所以你的结果可能会不一样. 在第二行中对a的操作是令a中生成一个2行4列的矩阵，且每一元素均是来自从0到1的随机数。 在这个随机生成的矩阵中，我们可以对元素进行求和以及寻找极值的操作，具体如下：
-np.sum(a)   # 4.4043622002745959
-np.min(a)   # 0.23651223533671784
-np.max(a)   # 0.90438450240606416
+#array([[ 0.94692159,  0.20821798,  0.35339414,  0.2805278 ],
+       [ 0.04836775,  0.04023552,  0.44091941,  0.21665268]])
 
-如果你需要对行或者列进行查找运算，就需要在上述代码中为 axis 进行赋值。 当axis的值为0的时候，将会以列作为查找单元， 当axis的值为1的时候，将会以行作为查找单元。
-为了更加清晰，在刚才的例子中我们继续进行查找：
+np.sum(a)   #4.4043622002745959
+np.min(a)   #0.23651223533671784
+np.max(a)   #0.90438450240606416
+
+(3) Operation by rows or columns - axis 
+
 print("a =",a)
-# a = [[ 0.23651224  0.41900661  0.84869417  0.46456022]
-# [ 0.60771087  0.9043845   0.36603285  0.55746074]]
+#a = [[ 0.23651224  0.41900661  0.84869417  0.46456022]
+#[ 0.60771087  0.9043845   0.36603285  0.55746074]]
 
 print("sum =",np.sum(a,axis=1))
-# sum = [ 1.96877324  2.43558896]
+#sum = [ 1.96877324  2.43558896]
 
 print("min =",np.min(a,axis=0))
-# min = [ 0.23651224  0.41900661  0.36603285  0.46456022]
+#min = [ 0.23651224  0.41900661  0.36603285  0.46456022]
 
 print("max =",np.max(a,axis=1))
-# max = [ 0.84869417  0.9043845 ]
+#max = [ 0.84869417  0.9043845 ]
 
 
 
