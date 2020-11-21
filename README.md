@@ -507,7 +507,7 @@ Name: 2013-01-02 00:00:00, dtype: int64
 
 (3)iloc
 print(df.iloc[3,1])
-# 13
+#13
 
 print(df.iloc[3:5,1:3])
 """
@@ -525,9 +525,152 @@ print(df.iloc[[1,3,5],1:3])
 
 """
 
-(4)
+(4)ix
+print(df.ix[:3,['A','C']])
+"""
+            A   C
+2013-01-01  0   2
+2013-01-02  4   6
+2013-01-03  8  10
+"""
+
+(5)boolean
+print(df[df.A>8])
+"""
+             A   B   C   D
+2013-01-04  12  13  14  15
+2013-01-05  16  17  18  19
+2013-01-06  20  21  22  23
 
 
+### 3.set value
+Original code and output:
+dates = pd.date_range('20130101', periods=6)
+df = pd.DataFrame(np.arange(24).reshape((6,4)),index=dates, columns=['A','B','C','D'])
+
+"""
+             A   B   C   D
+2013-01-01   0   1   2   3
+2013-01-02   4   5   6   7
+2013-01-03   8   9  10  11
+2013-01-04  12  13  14  15
+2013-01-05  16  17  18  19
+2013-01-06  20  21  22  23
+"""
+
+(1)loc & iloc
+df.iloc[2,2] = 1111
+df.loc['20130101','B'] = 2222
+
+"""
+             A     B     C   D
+2013-01-01   0  2222     2   3
+2013-01-02   4     5     6   7
+2013-01-03   8     9  1111  11
+2013-01-04  12    13    14  15
+2013-01-05  16    17    18  19
+2013-01-06  20    21    22  23
+"""
+
+(2)base on condition
+df.B[df.A>4] = 0
+"""
+                A     B     C   D
+2013-01-01   0  2222     2   3
+2013-01-02   4     5     6   7
+2013-01-03   8     0  1111  11
+2013-01-04  12     0    14  15
+2013-01-05  16     0    18  19
+2013-01-06  20     0    22  23 
+"""
+
+(3)base on row/column
+df['F'] = np.nan
+"""
+             A     B     C   D   F
+2013-01-01   0  2222     2   3 NaN
+2013-01-02   4     5     6   7 NaN
+2013-01-03   8     0  1111  11 NaN
+2013-01-04  12     0    14  15 NaN
+2013-01-05  16     0    18  19 NaN
+2013-01-06  20     0    22  23 NaN
+"""
+
+(4)add data
+df['E'] = pd.Series([1,2,3,4,5,6], index=pd.date_range('20130101',periods=6)) 
+"""
+             A     B     C   D   F  E
+2013-01-01   0  2222     2   3 NaN  1
+2013-01-02   4     5     6   7 NaN  2
+2013-01-03   8     0  1111  11 NaN  3
+2013-01-04  12     0    14  15 NaN  4
+2013-01-05  16     0    18  19 NaN  5
+2013-01-06  20     0    22  23 NaN  6
+"""
+
+### 4.deal with missing data
+original code:
+dates = pd.date_range('20130101', periods=6)
+df = pd.DataFrame(np.arange(24).reshape((6,4)),index=dates, columns=['A','B','C','D'])
+df.iloc[0,1] = np.nan
+df.iloc[1,2] = np.nan
+"""
+             A     B     C   D
+2013-01-01   0   NaN   2.0   3
+2013-01-02   4   5.0   NaN   7
+2013-01-03   8   9.0  10.0  11
+2013-01-04  12  13.0  14.0  15
+2013-01-05  16  17.0  18.0  19
+2013-01-06  20  21.0  22.0  23
+"""
+
+(1)pd.dropna() : delete whole row or column which contains NaN
+df.dropna(
+    axis=0,     
+    how='any'  
+    ) 
+"""
+             A     B     C   D
+2013-01-03   8   9.0  10.0  11
+2013-01-04  12  13.0  14.0  15
+2013-01-05  16  17.0  18.0  19
+2013-01-06  20  21.0  22.0  23
+"""
+
+(2)pd.fillna() : change to other value
+
+df.fillna(value=0)
+"""
+             A     B     C   D
+2013-01-01   0   0.0   2.0   3
+2013-01-02   4   5.0   0.0   7
+2013-01-03   8   9.0  10.0  11
+2013-01-04  12  13.0  14.0  15
+2013-01-05  16  17.0  18.0  19
+2013-01-06  20  21.0  22.0  23
+"""
+
+(3)pd.isnull() : if there are missing values
+
+df.isnull() 
+"""
+                A      B      C      D
+2013-01-01  False   True  False  False
+2013-01-02  False  False   True  False
+2013-01-03  False  False  False  False
+2013-01-04  False  False  False  False
+2013-01-05  False  False  False  False
+2013-01-06  False  False  False  False
+"""
 
 
+### 5.I/O
+(1)Read csv
+import pandas as pd 
+data = pd.read_csv('xxx.csv')
+print(data)
 
+(2)Save pickle file
+data.to_pickle('student.pickle')
+
+### 6.
