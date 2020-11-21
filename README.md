@@ -4,6 +4,7 @@ Used for learned data processing
 • Fast calculation speed: numpy and pandas are both written in C language, and pandas is based on numpy, which is an upgraded version of numpy.
 • Less resource consumption: Matrix calculations are used, which will be much faster than the dictionary or list that comes with python
 
+## Numpy
 ## Numpy Attributes
 • ndim: dimension
 • shape: number of rows and columns
@@ -164,7 +165,7 @@ print(np.clip(A,5,9))
         [ 6, 5, 5, 5]])
 
 
-## Numpy 索引
+## Numpy index
 ### One-dimensional
 import numpy as np
 A = np.arange(3,15)
@@ -226,7 +227,7 @@ for item in A.flat:
 #14
 
 
-## Numpy array 合并
+## Numpy array stack
 ### np.vstack() 
 
 import numpy as np
@@ -319,7 +320,7 @@ array([[1, 2, 2, 1],
 """
 
 
-## Numpy array 分割
+## Numpy array split
 
 import numpy as np
 A = np.arange(12).reshape((3, 4))
@@ -379,7 +380,7 @@ array([[ 2,  3],
 
 
 ## Numpy copy & deep copy
-### =
+(1) =
 import numpy as np
 
 a = np.arange(4)
@@ -402,13 +403,13 @@ print(a)            # array([11, 22, 33,  3])
 print(b)            # array([11, 22, 33,  3])
 print(c)            # array([11, 22, 33,  3])
 
-### copy()
+(2) copy()
 b = a.copy()    # deep copy
 print(b)        # array([11, 22, 33,  3])
 a[3] = 44
 print(a)        # array([11, 22, 33, 44])
 print(b)        # array([11, 22, 33,  3])
-此时a与b已经没有关联。
+
 
 
 
