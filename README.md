@@ -414,11 +414,15 @@ print(b)        # array([11, 22, 33,  3])
 ## Pandas
 ### 1.Basic introduction
 (1)Series : 
+
 import pandas as pd
+
 import numpy as np
+
 s = pd.Series([1,3,6,np.nan,44,1])
 
 print(s)
+
 """
 0     1.0
 1     3.0
@@ -498,8 +502,11 @@ df['E'] = pd.Series([1,2,3,4,5,6], index=pd.date_range('20130101',periods=6))
 
 
 ### 4.deal with missing data
+
 (1)pd.dropna() : delete whole row or column which contains NaN
+
 (2)pd.fillna() : change to other value
+
 (3)pd.isnull() : if there are missing values
 
 
@@ -536,15 +543,23 @@ plt.show()
 </p>
 
 (2)Data Frame visualization
+
 data = pd.DataFrame(
+    
     np.random.randn(1000,4),
+    
     index=np.arange(1000),
+    
     columns=list("ABCD")
+    
     )
+
 data.cumsum()
+
 data.plot()
+
 plt.show()
 
 <p>
-<img src="https://user-images.githubusercontent.com/23052423/99887023-dd72a180-2c38-11eb-955e-a7e785949226.png" width="400" height="220">
+<img src="https://user-images.githubusercontent.com/23052423/99887023-dd72a180-2c38-11eb-955e-a7e785949226.png" width="450" height="250">
 </p>
