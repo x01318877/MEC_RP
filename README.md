@@ -5,6 +5,7 @@ Used for learned data processing
 
 • Less resource consumption: Matrix calculations are used, which will be much faster than the dictionary or list that comes with python
 
+https://mofanpy.com/tutorials/data-manipulation/np-pd/
 ## Numpy
 ## 1.Numpy Attributes
 
