@@ -518,7 +518,8 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-(1)Create Series
+(1)Series visualization
+
 #random 1000 data
 data = pd.Series(np.random.randn(1000),index=np.arange(1000))
  
@@ -531,5 +532,19 @@ data.plot()
 plt.show()
 
 <p>
-<img src="https://user-images.githubusercontent.com/23052423/99886959-650be080-2c38-11eb-8acd-7dc80933bd37.png" width="600" height="180">
+<img src="https://user-images.githubusercontent.com/23052423/99886959-650be080-2c38-11eb-8acd-7dc80933bd37.png" width="400" height="220">
+</p>
+
+(2)Data Frame visualization
+data = pd.DataFrame(
+    np.random.randn(1000,4),
+    index=np.arange(1000),
+    columns=list("ABCD")
+    )
+data.cumsum()
+data.plot()
+plt.show()
+
+<p>
+<img src="https://user-images.githubusercontent.com/23052423/99887023-dd72a180-2c38-11eb-955e-a7e785949226.png" width="400" height="220">
 </p>
