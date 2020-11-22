@@ -26,25 +26,25 @@ WEEK 3:
 WEEK 4:
 1. Learning about DRL(Deep Reinforcement Learning): Q-Learning
 2. LaTEX: Fill the objectives topic of the report
-3. write about literature view
 
 
 WEEK 5:
-1. Learning about DRL(Deep Reinforcement Learning): DQN + Numpy & Pandas
-2. write about literature view
+1. Learning about DRL(Deep Reinforcement Learning): DQN 
+2. Prepare for literature view
 
 
 WEEK 6:
-1. Learning about DRL(Deep Reinforcement Learning): DQN + Tensorflow
-2. Study on Federated Learning  
-3. write about literature view
+1. Learning about DRL(Deep Reinforcement Learning): Numpy & Pandas
+2. write about literature view
 
 
 WEEK 7:
-1. Study on DRL + Federated Learning 
+1. Learning about DRL(Deep Reinforcement Learning): DQN + Tensorflow
+2. write about literature view
 
 
 WEEK 8:
-1. Study on DRL + Federated Learning 
+1. Learning about DRL(Deep Reinforcement Learning): DQN + Tensorflow
+2. write about literature view
 
 
