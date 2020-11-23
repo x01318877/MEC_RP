@@ -51,6 +51,8 @@ Tensor:
 
 - The feed is only valid in the method that calls it, and the method ends, the feed will disappear
 
+- feed_dict -> dictionary form
+
         tf.placeholder()    
         sess.run(***, feed_dict={input: **}).
 
