@@ -56,4 +56,5 @@ Tensor:
         tf.placeholder()    
         sess.run(***, feed_dict={input: **}).
 
-
+## 3. Activation Function
+(1) linear function
