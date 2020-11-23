@@ -33,6 +33,7 @@ Tensor:
 - The second-order tensor is a matrix, such as a two-dimensional [[1, 2, 3],[4, 5, 6],[7, 8, 9]] 
 
 
+## 2. Tensorflow - Session
 
 
 
