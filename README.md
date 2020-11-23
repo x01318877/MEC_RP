@@ -45,8 +45,13 @@ Tensor:
     state = tf.Variable()
 
 (3) Placeholder
+- Use placeholder to describe the node waiting for input, just specify the type
 
-    tf.placeholder()
-    sess.run(***, feed_dict={input: **}).
+- It is equivalent to hold the variable first, and then pass in data from the outside each time. Note that placeholder and feed_dict are used for binding.
+
+- The feed is only valid in the method that calls it, and the method ends, the feed will disappear
+
+        tf.placeholder()    
+        sess.run(***, feed_dict={input: **}).
 
 
