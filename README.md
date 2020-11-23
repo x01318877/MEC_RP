@@ -33,7 +33,20 @@ Tensor:
 - The second-order tensor is a matrix, such as a two-dimensional [[1, 2, 3],[4, 5, 6],[7, 8, 9]] 
 
 
-## 2. Tensorflow - Session
+## 2. Tensorflow - Session & Variable & Placeholder
+(1) Session
 
+    sess = tf.Session()
+
+(2) Variable
+    
+   In Tensorflow, a string must be defined as a variable, then it is a variable, which is different from Python.
+
+    state = tf.Variable()
+
+(3) Placeholder
+
+    tf.placeholder()
+    sess.run(***, feed_dict={input: **}).
 
 
