@@ -20,9 +20,19 @@ When the cost error is the smallest, it is the lowest point of the cost curve, b
 
 In this image, W's Global minima is in this position(orange), and the other solutions are Local minima. The global optimal is the best, but in many cases, you have A local optimal solution. The neural network can also make your local optimal good enough that even if you hold a local optimal, you can perform the task in your hand well.
 
-## 1.Tensorflow Processing Structure
+## 1. Tensorflow Processing Structure
 
 <img src="https://user-images.githubusercontent.com/23052423/99979340-e4b3bf80-2d9e-11eb-8c1e-1cc8c7e28251.gif" width="300" height="500">
 </p>
+
+The explanation of this animation is that the data -> input layer -> hidden layer -> output layer. It is processed by gradient descent. Gradient descent will update and improve several parameters, the updated parameters will run to the hidden layer and learn again, until the result converges.
+
+Tensor: 
+- The zero-order tensor is a scalar or a scalar, which is a value. For example, [1] 
+- The first-order tensor is a vector, such as one-dimensional [ 1, 2, 3] 
+- The second-order tensor is a matrix, such as a two-dimensional [[1, 2, 3],[4, 5, 6],[7, 8, 9]] 
+
+
+
 
 
