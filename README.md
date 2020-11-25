@@ -57,4 +57,10 @@ Tensor:
         sess.run(***, feed_dict={input: **}).
 
 ## 3. Activation Function
-(1) linear function
+(1) nonlinear function
+
+In a small number of layer structures, we can try many different excitation functions. 
+
+In the convolutional layer of Convolutional neural networks, the recommended excitation function is relu. 
+
+In recurrent neural networks, tanh or relu is recommended 
