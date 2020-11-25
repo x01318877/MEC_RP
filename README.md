@@ -61,6 +61,6 @@ Tensor:
 
 In a small number of layer structures, we can try many different excitation functions. 
 
-In the convolutional layer of Convolutional neural networks, the recommended excitation function is relu. 
+- In the convolutional layer of Convolutional neural networks, the recommended excitation function is relu. 
 
-In recurrent neural networks, tanh or relu is recommended 
+- In recurrent neural networks, tanh or relu is recommended 
