@@ -20,7 +20,9 @@ When the cost error is the smallest, it is the lowest point of the cost curve, b
 
 In this image, W's Global minima is in this position(orange), and the other solutions are Local minima. The global optimal is the best, but in many cases, you have A local optimal solution. The neural network can also make your local optimal good enough that even if you hold a local optimal, you can perform the task in your hand well.
 
-## 1. Tensorflow Processing Structure
+## Regression
+
+### 1. Tensorflow Processing Structure
 
 <img src="https://user-images.githubusercontent.com/23052423/99979340-e4b3bf80-2d9e-11eb-8c1e-1cc8c7e28251.gif" width="300" height="500">
 </p>
@@ -33,7 +35,7 @@ Tensor:
 - The second-order tensor is a matrix, such as a two-dimensional [[1, 2, 3],[4, 5, 6],[7, 8, 9]] 
 
 
-## 2. Tensorflow - Session & Variable & Placeholder
+### 2. Tensorflow - Session & Variable & Placeholder
 (1) Session
 
     sess = tf.Session()
@@ -56,7 +58,7 @@ Tensor:
         tf.placeholder()    
         sess.run(***, feed_dict={input: **}).
 
-## 3. Activation Function
+### 3. Activation Function
 (1) nonlinear function
 
 In a small number of layer structures, we can try many different excitation functions. 
@@ -97,7 +99,7 @@ tanh(...): Hyperbolic tangent activation function.
 
 
 
-## 4. add_layer()
+### 4. add_layer()
 
 https://mofanpy.com/tutorials/machine-learning/tensorflow/add-layer/
 
@@ -135,10 +137,13 @@ Finally, return the output and add a neural layer function-def add_layer() is de
     return outputs
 
 
-## 5. Building a neural network + matplotlib
+### 5. Building a neural network + matplotlib
     NN.py
     
-## 6. TensorBoard
+### 6. TensorBoard
     tensorboard.py
-    
-## 7.
+
+
+## Classification
+
+### 
