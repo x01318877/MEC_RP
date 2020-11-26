@@ -99,6 +99,8 @@ tanh(...): Hyperbolic tangent activation function.
 
 ## 4. add_layer()
 
+https://mofanpy.com/tutorials/machine-learning/tensorflow/add-layer/
+
 Defining a function to add layers in Tensorflow can easily add neural layers
 
 - Neural layer Parameter: weights、biases and Activation Function
@@ -121,5 +123,14 @@ Below, we define Wx_plus_b, which is the value of the inactive neural network. A
 
     Wx_plus_b = tf.matmul(inputs, Weights) + biases
 
+When activation_function-the activation function is None, the output is the current predicted value-Wx_plus_b, when it is not None, pass Wx_plus_b to the activation_function() function to get the output.
 
+    if activation_function is None:
+         outputs = Wx_plus_b
+     else:
+         outputs = activation_function(Wx_plus_b)
+
+Finally, return the output and add a neural layer function-def add_layer() is defined.
+
+    return outputs
 
