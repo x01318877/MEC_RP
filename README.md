@@ -64,3 +64,11 @@ In a small number of layer structures, we can try many different excitation func
 - In the convolutional layer of Convolutional neural networks, the recommended excitation function is relu. 
 
 - In recurrent neural networks, tanh or relu is recommended 
+
+(2) Process
+
+- layer1 and layer2 are both hidden layers, pass the value to the predictor and calculate the cost between predicte value and fact value.
+<img src="https://user-images.githubusercontent.com/23052423/100358452-1ff7fd80-2fee-11eb-957a-795bec123326.png" width="300" height="230">
+
+- This is extension of layer2. layer1 pass the value to layer2, layer2 process the value and see what value need to be avtived then prediction
+<img src="https://user-images.githubusercontent.com/23052423/100358460-21c1c100-2fee-11eb-9d5c-71e25d3eca47.png" width="300" height="230">
