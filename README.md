@@ -72,3 +72,54 @@ In a small number of layer structures, we can try many different excitation func
 
 - This is extension of layer2. layer1 pass the value to layer2, layer2 process the value and see what value need to be avtived then prediction
 <img src="https://user-images.githubusercontent.com/23052423/100358460-21c1c100-2fee-11eb-9d5c-71e25d3eca47.png" width="300" height="230">
+
+(3) Functions example
+
+https://www.tensorflow.org/api_docs/python/tf/keras/activations
+
+relu(...): Applies the rectified linear unit activation function.
+
+selu(...): Scaled Exponential Linear Unit (SELU).
+
+serialize(...): Returns the string identifier of an activation function.
+
+sigmoid(...): Sigmoid activation function, sigmoid(x) = 1 / (1 + exp(-x)).
+
+softmax(...): Softmax converts a real vector to a vector of categorical probabilities.
+
+softplus(...): Softplus activation function, softplus(x) = log(exp(x) + 1).
+
+softsign(...): Softsign activation function, softsign(x) = x / (abs(x) + 1).
+
+swish(...): Swish activation function, swish(x) = x * sigmoid(x).
+
+tanh(...): Hyperbolic tangent activation function.
+
+
+
+## 4. add_layer()
+
+Defining a function to add layers in Tensorflow can easily add neural layers
+
+- Neural layer Parameter: weights、biases and Activation Function
+
+(1) Function def add_layer() has four parameters: input value, input size, output size and Activation Function. We set the default Activation Function to be None
+
+     def add_layer(inputs, in_size, out_size, activation_function=None):    
+
+(2) Define weights and biases
+
+When generating the initial parameters, the normal distribution will be much better than all 0, so our weights here is a random variable matrix with in_size rows and out_size columns.
+
+    Weights = tf.Variable(tf.random_normal([in_size, out_size]))
+    
+In machine learning, the recommended value of biases is not 0, so here we add 0.1 to the 0 vector.
+
+    biases = tf.Variable(tf.zeros([1, out_size]) + 0.1)
+    
+Below, we define Wx_plus_b, which is the value of the inactive neural network. Among them, tf.matmul() is matrix multiplication.
+
+    Wx_plus_b = tf.matmul(inputs, Weights) + biases
+
+
+
