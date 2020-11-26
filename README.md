@@ -134,3 +134,8 @@ Finally, return the output and add a neural layer function-def add_layer() is de
 
     return outputs
 
+
+## 5. Building a neural network
+    NN.py
+    
+## 6. 
