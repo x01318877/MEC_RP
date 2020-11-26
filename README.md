@@ -138,4 +138,7 @@ Finally, return the output and add a neural layer function-def add_layer() is de
 ## 5. Building a neural network + matplotlib
     NN.py
     
-## 6. 
+## 6. TensorBoard
+    tensorboard.py
+    
+## 7.
