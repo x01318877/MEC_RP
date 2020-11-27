@@ -144,6 +144,4 @@ Finally, return the output and add a neural layer function-def add_layer() is de
     tensorboard.py
 
 
-## Classification
 
-### 
