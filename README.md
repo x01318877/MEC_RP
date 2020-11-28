@@ -48,3 +48,7 @@ WEEK 8:
 2. write about literature view
 
 
+WEEK 9:
+1. Learning about DRL(Deep Reinforcement Learning): DQN + Tensorflow
+2. code implement
+3. update literature view
